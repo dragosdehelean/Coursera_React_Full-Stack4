@@ -49,6 +49,7 @@ var secureServer = https.createServer(options, app);
 
 secureServer.listen(app.get("secPort"), () => {
    console.log("Server listening on port ", app.get("secPort"));
+   console.log("ATENTIE!! Vorbim de https://localhost: ", app.get("secPort"));
 });
 secureServer.on("error", onError);
 secureServer.on("listening", onListening);
