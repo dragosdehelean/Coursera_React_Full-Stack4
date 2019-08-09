@@ -42,7 +42,7 @@ const connect = mongoose.connect(url);
 
 connect.then(
    db => {
-      console.log("Connected correctly to server");
+      console.log("Connected correctly to the MONGO server");
    },
    err => {
       console.log(err);
@@ -65,6 +65,7 @@ app.use("/dishes", dishRouter);
 app.use("/promotions", promoRouter);
 app.use("/leaders", leaderRouter);
 app.use("/imageUpload", uploadRouter);
+app.use("/favorites", favoritesRouter)
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
