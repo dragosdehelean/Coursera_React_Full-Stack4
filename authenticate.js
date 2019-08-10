@@ -48,7 +48,6 @@ exports.verifyAdmin = (req, res, next) => {
 };
 
 exports.userIsOwner = (req, res, next) => {
-    console.log("test!!")
    Dishes.findById(req.params.dishId).then(dish => {
         console.log("Uite ce am in baza de date: " + dish.comments.id(req.params.commentId).author._id);
         console.log(
